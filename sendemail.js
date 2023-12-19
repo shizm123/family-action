@@ -5,17 +5,17 @@ const transporter = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: '2733287749@qq.com',
-    pass: 'vmzxgybmqgdrddbe',
+    user: process.env.USER_NAME,
+    pass: process.env.PASS_WORD
   },
 })
 
 async function sendEmail(to, subject, text) {
   const mailOptions = {
-    from: '2733287749@qq.com',
+    from: process.env.USER_NAME,
     to: to,
     subject: subject,
-    text: text,
+    text: text
   }
   try {
     await transporter.sendMail(mailOptions)
