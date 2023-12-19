@@ -28,8 +28,8 @@ jobs:
       - name: 'RUN APP'
         run: node main.js
         env:
-          USER_NAME: 111
-          PASS_WORD: ${{ secrets.MAIL_USERNAME }}
+          USER_NAME: ${{ secrets.MAIL_USERNAME }},
+          PASS_WORD: 123
 
 
 
