@@ -12,7 +12,8 @@ jobs:
     steps:
       - name: 'Checkout codes'
         uses: actions/checkout@v1
-
+      - name: 'Get Date'
+        run: echo "REPORT_DATE=$(TZ=':Asia/Shanghai' date '+%Y-%m-%d %T')"
       - name: 'User Node.js'
         uses: actions/setup-node@v1
       - run : npm install
