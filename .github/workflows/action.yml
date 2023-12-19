@@ -1,0 +1,22 @@
+name: 'GitHub Actions Weather Bot'
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 1 * * *'
+
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout codes'
+        uses: actions/checkout@v1
+
+      - name: 'User Node.js'
+        uses: actions/setup-node@v1
+      - run : npm install
+
+      - name: 'RUN APP'
+      - run : node ./main.js
+
