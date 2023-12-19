@@ -29,7 +29,7 @@ jobs:
         run: node main.js
         env:
           USER_NAME: ${{ secrets.MAIL_USERNAME }}
-          PASS_WORD: 123
+          PASS_WORD: ${{ secrets.MAIL_PASSWORD }}
 
 
 
