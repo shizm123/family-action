@@ -16,6 +16,7 @@ jobs:
       - name: 'Get Date'
         run: echo "REPORT_DATE=$(TZ=':Asia/Shanghai' date '+%Y-%m-%d %T')"
 
+
       - name: 'Set up Node.js'
         uses: actions/setup-node@v3
         with:
@@ -26,4 +27,5 @@ jobs:
 
       - name: 'RUN APP'
       - run : node ./main.js
+
 
