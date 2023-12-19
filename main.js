@@ -1,6 +1,8 @@
 const EmailUtil  = require('./sendemail')
 const BirthdayUtil = require('./familyBirthdayCheck')
 const isBirthday = BirthdayUtil.checkDate();
+console.log('username',process.env.USER_NAME)
+console.log('password',process.env.PASS_WORD)
 if (isBirthday==='false'){
   console.log('不是');
   EmailUtil.sendEmail('2649144933@qq.com','家人生日提醒',"test")
