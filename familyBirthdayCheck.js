@@ -12,7 +12,7 @@ const dayMap = {
 function checkDate() {
   var today = new Date()
   console.log('当前时间为:', today)
-  const lunarDate = calendar.solar2lunar(today.getFullYear(), today.getMonth(), today.getDate())
+  const lunarDate = calendar.solar2lunar(today.getFullYear(), today.getMonth()+1, today.getDate())
   // const lunarDate = calendar.solar2lunar(2024, 4, 21)
   console.log('农历时间为:', lunarDate.lunarDate)
 
